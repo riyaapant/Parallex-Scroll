@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex Scrolling Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="media/stars.png" id="stars">
+        <img src="media/moon.png" id="moon">
+        <img src="media/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="media/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallex Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed praesentium possimus assumenda commodi, dolore
+            excepturi ipsum dolorum dolores aspernatur mollitia velit tempore autem suscipit reiciendis explicabo culpa.
+            Maxime sed enim odit quo nemo, voluptates quidem officiis ducimus similique? Asperiores, perspiciatis autem
+            quae ipsa quisquam alias repudiandae quod iure ratione enim! Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Expedita ut exercitationem quisquam deserunt. Facere quod consequatur labore obcaecati
+            neque, inventore eius numquam magni quis voluptatibus, eum nemo illum mollitia necessitatibus veniam.<br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quibusdam. Voluptatum, ipsum? Amet
+            eveniet eos eius, iusto dolores sunt autem expedita, minima atque maxime architecto ut debitis beatae a non
+            quos distinctio deserunt odit id doloremque. Aut fugiat, dolores praesentium iusto molestiae animi autem
+            voluptatem? Natus odio, unde quaerat doloremque saepe, illo pariatur amet culpa animi nemo, velit recusandae
+            sint. <br><br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, vel. Rem, hic deleniti distinctio
+            placeat unde aperiam sed. Nemo accusamus perferendis, cum illum ipsam provident eligendi id pariatur
+            similique doloremque nesciunt deleniti odio alias ex porro eos libero sequi dicta dolorum recusandae in
+            natus non ducimus? Porro ut minus consequuntur facilis veritatis rem doloribus dolore ratione nulla dolorum
+            repellat cupiditate, placeat a mollitia praesentium distinctio laboriosam, eligendi possimus, consequatur
+            culpa!
+            neque, inventore eius numquam magni quis voluptatibus, eum nemo illum mollitia necessitatibus veniam.<br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quibusdam. Voluptatum, ipsum? Amet
+            eveniet eos eius, iusto dolores sunt autem expedita, minima atque maxime architecto ut debitis beatae a non
+            quos distinctio deserunt odit id doloremque. Aut fugiat, dolores praesentium iusto molestiae animi autem
+            voluptatem? Natus odio, unde quaerat doloremque saepe, illo pariatur amet culpa animi nemo, velit recusandae
+            sint. <br><br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, vel. Rem, hic deleniti distinctio
+            placeat unde aperiam sed. Nemo accusamus perferendis, cum illum ipsam provident eligendi id pariatur
+            similique doloremque nesciunt deleniti odio alias ex porro eos libero sequi dicta dolorum recusandae in
+            natus non ducimus? Porro ut minus consequuntur facilis veritatis rem doloribus dolore ratione nulla dolorum
+            repellat cupiditate, placeat a mollitia praesentium distinctio laboriosam, eligendi possimus, consequatur
+            culpa! </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
